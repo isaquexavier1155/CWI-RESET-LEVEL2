@@ -47,8 +47,7 @@ public class Registradora {
     private static void segundoBug() {
         DataProjeto.criarDataComCozinhaEncerradaMasComDiaUtil();
         String item = "torta";
-        int quantidade = 10;
-
+        int quantidade = 10;//correçao do bug 2 realizado com sucesso, alterei a classe relaçao peso preco, adicionei calculo fatia de torta
         double precoTotal = registrarItem(item, quantidade);
 
         System.out.println(String.format("Valor total: %.2f", precoTotal));

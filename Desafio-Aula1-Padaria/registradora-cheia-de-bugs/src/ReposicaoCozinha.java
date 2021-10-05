@@ -1,7 +1,7 @@
 public class ReposicaoCozinha {
 
     static void reporItem(String item) {
-        if ("paes".equals(item)) {
+        if ("pao".equals(item)) {//troca da palavra paes por pao
             ItensPorQuantidade.pao = 3600;
         }
         if ("torta".equals(item)) {

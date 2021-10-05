@@ -7,8 +7,11 @@ public class RelacaoPesoPreco {
             precoTotal = 12.75 * (qtd * 60 / 1000);
         }
 
-        if ("torta".equals(item)) {
-            precoTotal = 96.00 * (qtd / 16);
+        //if ("torta".equals(item)) {
+        //  precoTotal = 96.00 * (qtd / 16);
+        //}
+        if("torta".equals(item)){//correçao do bug 2 realizado com sucesso, alterei a classe relaçao peso preco, adicionei calculo fatia de torta
+            precoTotal = 6.00 * qtd;
         }
 
         if ("leite".equals(item)) {
