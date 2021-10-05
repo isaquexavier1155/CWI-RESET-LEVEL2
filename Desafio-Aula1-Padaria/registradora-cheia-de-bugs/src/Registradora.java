@@ -85,7 +85,7 @@ public class Registradora {
     private static void quintoBug() {
         DataProjeto.criarDataComCozinhaFuncionando();
         String item = "pao";
-        int quantidade = 10;
+        int quantidade = 10;//correçao do bug 5 realizado com sucesso, alterei a classe RelaçaoPesoPreco, reescrevi cálculo
 
         double precoTotal = registrarItem(item, quantidade);
 
