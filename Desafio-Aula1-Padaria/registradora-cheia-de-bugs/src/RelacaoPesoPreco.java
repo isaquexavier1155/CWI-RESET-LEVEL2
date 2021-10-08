@@ -3,24 +3,29 @@ public class RelacaoPesoPreco {
     public static double retornaPrecoProduto(String item, int qtd) {
         double precoTotal = 0;
 
-        if ("pao".equals(item)) {//correçao do bug 5 realizado com sucesso, alterei a classe RelaçaoPesoPreco, reescrevi cálculo
+        if (Constantes.PAO.equals(item)) {
             precoTotal = 12.75 * qtd * 60 / 1000;
+            ItensPorQuantidade.pao = ItensPorQuantidade.pao - (qtd * 60);
         }
 
-        if ("torta".equals(item)) {
-          precoTotal = 96.00 * qtd / 16;
+        if (Constantes.TORTA.equals(item)) {
+            precoTotal = 96.00 * qtd / 16;
+            ItensPorQuantidade.torta = ItensPorQuantidade.torta - qtd;
         }
 
-        if ("leite".equals(item)) {
+        if (Constantes.LEITE.equals(item)) {
             precoTotal = 4.48 * qtd;
+            ItensPorQuantidade.leite = ItensPorQuantidade.leite - qtd;
         }
 
-        if ("cafe".equals(item)) {
+        if (Constantes.CAFE.equals(item)) {
             precoTotal = 9.56 * qtd;
+            ItensPorQuantidade.cafe = ItensPorQuantidade.cafe - qtd;
         }
 
-        if ("sanduiche".equals(item)) { //alteraçao de sanduba para sanduiche
+        if (Constantes.SANDUICHE_PRONTO.equals(item)) {
             precoTotal = 4.5 * qtd;
+            ItensPorQuantidade.sanduiche = ItensPorQuantidade.sanduiche - qtd;
         }
 
         return precoTotal;
