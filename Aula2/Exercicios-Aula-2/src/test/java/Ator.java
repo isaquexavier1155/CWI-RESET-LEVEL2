@@ -5,7 +5,4 @@ public class Ator extends Pessoa {
         super(nome, idade, genero);
         this.quantidadeFilmes = quantidadeFilmes;
     }
-
-
-
 }
