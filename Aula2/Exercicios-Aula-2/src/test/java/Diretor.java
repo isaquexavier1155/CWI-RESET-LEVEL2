@@ -10,17 +10,10 @@ public class Diretor {
         this.quantidadeFilmes = quantidadeFilmes;
     }
 
-
-
     public String getNome() {
         return nome;
     }
 
-    //ublic Diretor(Integer nome, Integer idade, Genero genero){
-    //    this.nome = "Celso";
-     //   this.idade = 24;
-     //   this.genero = genero.MASCULINO;
-   // }
     public void dadosDiretor(){
         System.out.println("Nome Diretor: " + nome);
         System.out.println("Idade Diretor: " + idade);

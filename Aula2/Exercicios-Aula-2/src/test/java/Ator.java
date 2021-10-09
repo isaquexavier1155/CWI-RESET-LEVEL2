@@ -9,8 +9,6 @@ public class Ator {
         System.out.println("Nome Ator: " + nome);
         System.out.println("Idade Ator: " + idade);
         System.out.println("Genero Ator: " + genero);
-
-
     }
     public Ator(String nome, Integer idade, Genero genero) {
         this.nome = nome;
