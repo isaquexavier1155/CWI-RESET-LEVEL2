@@ -59,8 +59,9 @@ public class Exercicios1 {
         Integer[] numVetor = new Integer[6];//criacao do array,matriz,de nome numVetor, com 6 celulas
         numVetor = numeros.toArray(new Integer[numeros.size()]);//converte numeros da lista em array
         int recebeMudancas;//criacao de variavel que recebera cada mudanca
-        for (int i = 0; i < numeros.size() - 1; i++) {//inicio da iteracao para fazer as trocas de posicao no array
-            for (int j = i + 1; j < numeros.size(); j++) {//inicio do bubble sort
+        for (int i = 0; i < numeros.size() - 1; i++) {//inicio da iteracao para fazer as trocas de posicao no array,
+            // compara carta anterior com a proxima carta do array, primeira carta assume o ultimo lugar
+            for (int j = i + 1; j < numeros.size(); j++) {//inicio do bubble sort, compara cada carta e se for maior troca
                 if (numVetor[j] < numVetor[i]) {
                     recebeMudancas = numVetor[j];
                     numVetor[j] = numVetor[i];
