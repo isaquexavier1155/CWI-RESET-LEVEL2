@@ -15,5 +15,6 @@ public class Aplicacao {
         diretor.imprimeDadosPessoa();
         System.out.println("-----------------Ator Pricipal-----------------");
         ator.imprimeDadosPessoa();
+
     }
 }
