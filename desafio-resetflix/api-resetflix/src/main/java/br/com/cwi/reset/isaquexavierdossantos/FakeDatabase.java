@@ -5,12 +5,11 @@ import java.util.List;
 
 public class FakeDatabase {
 
-    private List<Ator> atores = new ArrayList<>();
+
+    private List<Ator> atores = new ArrayList<>();//pede dados da classe Ator e retorna lista NA variavel atores
+
+
     private List<Diretor> diretores = new ArrayList<>();
-   // private List<PersonagemAtor> personagens = new ArrayList<>();
-    //private List<Genero> generos = new ArrayList<>();
-
-
 
 
     public void persisteAtor(Ator ator) {
