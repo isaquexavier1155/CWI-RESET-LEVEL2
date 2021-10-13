@@ -28,15 +28,15 @@ public class AtorService{
 
 
     //agora
-    public List<Ator> criarAtor(AtorRequest atorRequest) {
-
-        System.out.println("Um ator criado");
+    public List<Ator> criarAtor(AtorRequest atorRequest)throws AvaliacaoForaDoPadraoException {
 
         List<Ator> atores = new ArrayList<>();
-        Ator ator1 = new Ator(01,"Will Smith", LocalDate.of(1975, Month.APRIL, 12),StatusCarreira.EM_ATIVIDADE,1987);
+        Ator ator1 = new Ator(01,"Will Smith", LocalDate.of(1975, Month.APRIL, 12),StatusCarreira.EM_ATIVIDADE,1989);
         Ator ator2 = new Ator(02,"Leonardo di Capri",LocalDate.of(1979, Month.JANUARY, 21),StatusCarreira.EM_ATIVIDADE,1993);
+        Ator ator3 = new Ator(03,"Leonardo di Capri",LocalDate.of(1979, Month.JANUARY, 21),StatusCarreira.EM_ATIVIDADE,1993);
         atores.add(ator1);
         atores.add(ator2);
+        atores.add(ator3);
 
         return atores;
     }

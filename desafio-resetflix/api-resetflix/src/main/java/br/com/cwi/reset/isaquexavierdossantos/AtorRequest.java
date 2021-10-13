@@ -26,7 +26,9 @@ public class AtorRequest {
    //nao tenho certeza linha dee baixo
   // private AtorRequest atorRequest;
 
-   public AtorRequest(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+   public AtorRequest(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) throws AvaliacaoForaDoPadraoException {
+
+
       this.nome = nome;
       this.dataNascimento = dataNascimento;
       this.statusCarreira = statusCarreira;

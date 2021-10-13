@@ -8,7 +8,10 @@ import java.util.List;
 public class Aplicacao {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AvaliacaoForaDoPadraoException{
+        // //EXCECAO 3 Criar terceira Exception
+
+        //O throws ACIMA VALIDA QUE AQUI NAO VAI ACEITAR AVALIAÇAO FORA DOS PADROES DE 1 A 5
         FakeDatabase fakeDatabase = new FakeDatabase();//instacia objeto com nome fakeDatabase da classe FakeDatabase
         AtorService atorService = new AtorService(fakeDatabase);
         //String nome = "Will Smith";

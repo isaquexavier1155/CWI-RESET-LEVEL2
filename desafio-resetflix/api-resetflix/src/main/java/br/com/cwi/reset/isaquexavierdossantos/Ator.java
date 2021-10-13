@@ -18,7 +18,14 @@ private StatusCarreira statusCarreira;
 private Integer anoInicioAtividade;
 
 //método construtor de ator abaixo
-    public Ator(Integer id, String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+    public Ator(Integer id, String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) throws AvaliacaoForaDoPadraoException {
+        //Criei essa regra de ecessaoo
+
+        if (anoInicioAtividade < 1800) {
+            //EXCECAO 2 Criar segunda exception
+            throw new AvaliacaoForaDoPadraoException();
+            //SE AVALIACAO COLOCADA FICAR FORA DOS PADROES DA ERRRO NO CÓDIGO, ATIVA CLASSE AvaliacaoForaDoPadraoException
+        }
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
