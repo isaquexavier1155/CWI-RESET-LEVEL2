@@ -1,4 +1,4 @@
-package br.com.cwi.reset.isaquexavierdossantos.model;
+package br.com.cwi.reset.josealencar.model;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ public class Filme {
     private Integer anoLancamento;
     private String capaFilme;
     private List<Genero> generos;
-    private Diretor diretor;
     private Estudio estudio;
+    private Diretor diretor;
     private List<PersonagemAtor> personagens;
     private String resumo;
 

@@ -1,4 +1,4 @@
-package br.com.cwi.reset.isaquexavierdossantos.model;
+package br.com.cwi.reset.josealencar.model;
 
 import java.time.LocalDate;
 
@@ -17,9 +17,6 @@ public class Ator {
         this.statusCarreira = statusCarreira;
         this.anoInicioAtividade = anoInicioAtividade;
     }
-
-
-
 
     public Integer getId() {
         return id;

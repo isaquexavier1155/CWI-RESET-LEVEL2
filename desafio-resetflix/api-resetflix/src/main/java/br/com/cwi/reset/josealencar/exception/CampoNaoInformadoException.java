@@ -1,4 +1,4 @@
-package br.com.cwi.reset.isaquexavierdossantos.exception;
+package br.com.cwi.reset.josealencar.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class CampoNaoInformadoException extends Exception {
 
     public CampoNaoInformadoException(final String campo) {
-        super(String.format("Campo obrigatório não informado! Favor informar o campo %s.", campo));
+        super(String.format("Campo obrigatório não informado. Favor informar o campo %s.", campo));
     }
 }
