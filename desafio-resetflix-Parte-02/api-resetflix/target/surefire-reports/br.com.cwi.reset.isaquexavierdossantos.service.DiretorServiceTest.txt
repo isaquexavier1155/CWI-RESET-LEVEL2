@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 6, Errors: 6, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest
+deveRetornarErroQuandoDiretorComInicioAtividadeAnteriorNascimento  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Ano de início de atividade inválido para o diretor cadastrado.> but was: <Ano de início de atividade inválido para o diretor cadastradoo.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoDiretorComInicioAtividadeAnteriorNascimento(DiretorServiceTest.java:118)
+
+deveRetornarErroQuandoDataNascimentoNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo dataNascimento.> but was: <Campo obrigatório não informado! Favor informar o campo dataNascimento.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoDataNascimentoNulo(DiretorServiceTest.java:54)
+
+deveRetornarErroQuandoNomeNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo nome.> but was: <Campo obrigatório não informado! Favor informar o campo nome.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoNomeNulo(DiretorServiceTest.java:38)
+
+deveSalvarDiretorEConsultarListaComUmNovoDiretor  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveSalvarDiretorEConsultarListaComUmNovoDiretor(DiretorServiceTest.java:147)
+
+deveRetornarApenasFiltradosPorNome  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarApenasFiltradosPorNome(DiretorServiceTest.java:192)
+
+deveRetornarErroQuandoNenhumDiretorCadastradoNaConsulta  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Esperado exceção de diretores não cadastrados. ==> Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoNenhumDiretorCadastradoNaConsulta(DiretorServiceTest.java:154)
+
+deveRetornarTodosOsDiretores  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarTodosOsDiretores(DiretorServiceTest.java:212)
+
+deveRetornarDiretorPorId  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarDiretorPorId(DiretorServiceTest.java:255)
+
+deveRetornarErroQuandoNenhumDiretorCadastradoComFiltroInformado  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoNenhumDiretorCadastradoComFiltroInformado(DiretorServiceTest.java:170)
+
+deveRetornarErroQuandoAnoInicioAtividadeNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo anoInicioAtividade.> but was: <Campo obrigatório não informado! Favor informar o campo anoInicioAtividade.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoAnoInicioAtividadeNulo(DiretorServiceTest.java:70)
+
+deveRetornarErroQuandoDiretorJaExistenteComMesmoNome  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um diretor cadastrado para o nome Mel Gibson.
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoDiretorJaExistenteComMesmoNome(DiretorServiceTest.java:130)
+
+deveRetornarErroQuandoConsultaDiretorNaoInformarId  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo id.> but was: <Campo obrigatório não informado! Favor informar o campo id.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.DiretorServiceTest.deveRetornarErroQuandoConsultaDiretorNaoInformarId(DiretorServiceTest.java:228)
+

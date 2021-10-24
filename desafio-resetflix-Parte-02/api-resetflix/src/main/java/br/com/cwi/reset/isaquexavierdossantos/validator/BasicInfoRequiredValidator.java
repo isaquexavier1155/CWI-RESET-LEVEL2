@@ -7,13 +7,13 @@ import java.time.LocalDate;
 public class BasicInfoRequiredValidator {
 
     public void accept(final String nome, final LocalDate dataNascimento, final Integer anoInicioAtividade, final TipoDominioException tipoDominioException) throws Exception {
-        if (nome == null) {
+       /* if (nome == null) {
             throw new NomeNaoInformadoException();
         }
 
         if (dataNascimento == null) {
             throw new DataNascimentoNaoInformadoException();
-        }
+        }*/
 
         if (anoInicioAtividade == null) {
             throw new AnoInicioAtividadeNaoInformadoException();

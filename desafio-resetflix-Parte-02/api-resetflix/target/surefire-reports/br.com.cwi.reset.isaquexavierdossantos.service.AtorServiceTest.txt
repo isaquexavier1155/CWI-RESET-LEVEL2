@@ -1,0 +1,68 @@
+-------------------------------------------------------------------------------
+Test set: br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 8, Errors: 8, Skipped: 0, Time elapsed: 0.12 s <<< FAILURE! - in br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest
+deveRetornarErroQuandoConsultaAtorNaoEncontrarAtorPorId  Time elapsed: 0.018 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoConsultaAtorNaoEncontrarAtorPorId(AtorServiceTest.java:343)
+
+deveRetornarErroQuandoNenhumAtorCadastradoComFiltroInformado  Time elapsed: 0.006 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoNenhumAtorCadastradoComFiltroInformado(AtorServiceTest.java:201)
+
+deveRetornarErroQuandoDataNascimentoNulo  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo dataNascimento.> but was: <Campo obrigatório não informado! Favor informar o campo dataNascimento.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoDataNascimentoNulo(AtorServiceTest.java:58)
+
+deveRetornarErroQuandoNomeNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo nome.> but was: <Campo obrigatório não informado! Favor informar o campo nome.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoNomeNulo(AtorServiceTest.java:41)
+
+deveRetornarApenasFiltradosPorNome  Time elapsed: 0.009 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarApenasFiltradosPorNome(AtorServiceTest.java:247)
+
+deveRetornarErroQuandoNenhumAtorCadastradoNaConsultaDeTodosAtores  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Esperado exceção de nenhum ator cadastrado. ==> Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoNenhumAtorCadastradoNaConsultaDeTodosAtores(AtorServiceTest.java:286)
+
+deveRetornarAtoresEmAtividadeQuandoNaoInformadoFiltro  Time elapsed: 0.001 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarAtoresEmAtividadeQuandoNaoInformadoFiltro(AtorServiceTest.java:275)
+
+deveRetornarErroQuandoAtorComInicioAtividadeAnteriorNascimento  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Ano de início de atividade inválido para o ator cadastrado.> but was: <Ano de início de atividade inválido para o ator cadastradoo.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoAtorComInicioAtividadeAnteriorNascimento(AtorServiceTest.java:143)
+
+deveRetornarErroQuandoConsultaAtorNaoInformarId  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo id.> but was: <Campo obrigatório não informado! Favor informar o campo id.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoConsultaAtorNaoInformarId(AtorServiceTest.java:332)
+
+deveRetornarErroQuandoStatusCarreiraNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo statusCarreira.> but was: <Campo obrigatório não informado! Favor informar o campo statusCarreira.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoStatusCarreiraNulo(AtorServiceTest.java:75)
+
+deveRetornarTodosOsAtores  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarTodosOsAtores(AtorServiceTest.java:315)
+
+deveRetornarErroQuandoAnoInicioAtividadeNulo  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Campo obrigatório não informado. Favor informar o campo anoInicioAtividade.> but was: <Campo obrigatório não informado! Favor informar o campo anoInicioAtividade.>
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoAnoInicioAtividadeNulo(AtorServiceTest.java:92)
+
+deveRetornarAtorPorId  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarAtorPorId(AtorServiceTest.java:361)
+
+deveRetornarApenasAtoresEmAtividade  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarApenasAtoresEmAtividade(AtorServiceTest.java:225)
+
+deveRetornarErroQuandoAtorJaExistenteComMesmoNome  Time elapsed: 0 s  <<< ERROR!
+br.com.cwi.reset.isaquexavierdossantos.exception.CadastroDuplicadoException: Já existe um ator cadastrado para o nome Will Smith.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoAtorJaExistenteComMesmoNome(AtorServiceTest.java:156)
+
+deveRetornarErroQuandoNenhumAtorCadastradoNaConsulta  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Esperado exceção de nenhum ator cadastrado. ==> Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at br.com.cwi.reset.isaquexavierdossantos.service.AtorServiceTest.deveRetornarErroQuandoNenhumAtorCadastradoNaConsulta(AtorServiceTest.java:184)
+

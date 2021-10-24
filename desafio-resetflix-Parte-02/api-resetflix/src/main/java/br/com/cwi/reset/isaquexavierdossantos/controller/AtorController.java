@@ -10,6 +10,7 @@ import br.com.cwi.reset.isaquexavierdossantos.service.AtorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -39,21 +40,22 @@ public class AtorController {
     // 200, 400, se nao tiver nada é padrao retornar 200, entao cuidar falso 200
     //  @ResponseStatus.aqui depois do ponto escolhe outros retornos ex 400
 
-    public void criarAtor(@RequestBody AtorRequest atorRequest) throws Exception {//Exception só joga pra cima, por que ela ja vai vim com a notcao para o spring tratar
+    public void criarAtor(@RequestBody @Valid AtorRequest atorRequest) throws Exception {//Exception só joga pra cima, por que ela ja vai vim com a notcao para o spring tratar
         this.atorService.criarAtor(atorRequest);
-        //recebe ator request e chama a service passando ator
+        //@Valid acima é pra aceitar os Beans Validations da Classe Ator Request @NotNull
+        //recebe ator request  e chama a service passando ator
         //@RequestBody: Aqui estamos dizendo que recebemos tal parâmetro no corpo da requisição.
         // Obs: Métodos GET e DELETE não possuem corpo em suas requests.
 
     }
 
-   /* @GetMapping
+    @GetMapping//consul
     public List<Ator> consultarAtores() throws Exception {//aqui deu certo nao alterar
         final List<Ator> atores = atorService.consultarAtores();
-       return atores;
-    }*/
+       return atores;//retorna todos os atores cadastrdos
+    }
 
-    @GetMapping
+    @GetMapping(path = "/em_atividade")
     public List<AtorEmAtividade> listarAtoresEmAtividade(String filtroNome) throws Exception {
         final List<Ator> atoresCadastrados = atorService.consultarAtores();//Troquei o ator database por ator service e o metodo
 
@@ -88,7 +90,7 @@ public class AtorController {
     }
 
     @GetMapping("{id}")
-    public Ator getById(@PathVariable Integer id) throws Exception {
+    public Ator consultarAtor(@PathVariable Integer id) throws Exception {
 
         if (id == null) {
             throw new IdNaoInformado();

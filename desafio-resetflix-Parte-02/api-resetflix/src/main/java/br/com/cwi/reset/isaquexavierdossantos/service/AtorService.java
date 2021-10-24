@@ -4,21 +4,28 @@ import br.com.cwi.reset.isaquexavierdossantos.FakeDatabase;
 import br.com.cwi.reset.isaquexavierdossantos.exception.*;
 import br.com.cwi.reset.isaquexavierdossantos.model.Ator;
 import br.com.cwi.reset.isaquexavierdossantos.model.StatusCarreira;
+import br.com.cwi.reset.isaquexavierdossantos.repository.AtorRepository;
 import br.com.cwi.reset.isaquexavierdossantos.request.AtorRequest;
 import br.com.cwi.reset.isaquexavierdossantos.response.AtorEmAtividade;
 import br.com.cwi.reset.isaquexavierdossantos.validator.BasicInfoRequiredValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@Service
 public class AtorService {
+    @Autowired
+    private AtorRepository repository;
 
-    private FakeDatabase fakeDatabase;
+
+    /*private FakeDatabase fakeDatabase;
 
     public AtorService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
-    }
+    }*/
 
     public void criarAtor(AtorRequest atorRequest) throws Exception {
         new BasicInfoRequiredValidator().accept(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getAnoInicioAtividade(), TipoDominioException.ATOR);

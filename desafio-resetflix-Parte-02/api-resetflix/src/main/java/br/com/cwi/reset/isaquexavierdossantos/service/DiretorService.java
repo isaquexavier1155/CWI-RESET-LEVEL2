@@ -2,21 +2,30 @@ package br.com.cwi.reset.isaquexavierdossantos.service;
 
 import br.com.cwi.reset.isaquexavierdossantos.exception.*;
 import br.com.cwi.reset.isaquexavierdossantos.model.Diretor;
+import br.com.cwi.reset.isaquexavierdossantos.repository.AtorRepository;
+import br.com.cwi.reset.isaquexavierdossantos.repository.DiretorRepository;
 import br.com.cwi.reset.isaquexavierdossantos.request.DiretorRequest;
 import br.com.cwi.reset.isaquexavierdossantos.FakeDatabase;
 import br.com.cwi.reset.isaquexavierdossantos.validator.BasicInfoRequiredValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@Service
 public class DiretorService {
+    @Autowired
+    private DiretorRepository repository;
 
-    private FakeDatabase fakeDatabase;
+
+    /*private FakeDatabase fakeDatabase;
 
     public DiretorService(FakeDatabase fakeDatabase) {
+
         this.fakeDatabase = fakeDatabase;
-    }
+    }*/
 
     public void cadastrarDiretor(final DiretorRequest diretorRequest) throws Exception {
         new BasicInfoRequiredValidator().accept(diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade(), TipoDominioException.DIRETOR);
