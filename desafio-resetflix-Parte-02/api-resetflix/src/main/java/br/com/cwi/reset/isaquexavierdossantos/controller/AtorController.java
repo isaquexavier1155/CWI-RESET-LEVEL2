@@ -7,6 +7,7 @@ import br.com.cwi.reset.isaquexavierdossantos.model.StatusCarreira;
 import br.com.cwi.reset.isaquexavierdossantos.request.AtorRequest;
 import br.com.cwi.reset.isaquexavierdossantos.response.AtorEmAtividade;
 import br.com.cwi.reset.isaquexavierdossantos.service.AtorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,15 +26,18 @@ import java.util.Locale;
 // estamos especificando qual método/verbo HTTP é utilizado. exe get, post, delete
 
 public class AtorController {
+    @Autowired
+    private AtorService service;
 
-    private AtorService atorService;//refereneciar a ator service pois e nela que esta a regra de negocio e enao vamos mecher
-    private FakeDatabase fakeDatabase;
+   // private AtorService atorService;//refereneciar a ator service pois e nela que esta a regra de negocio e enao vamos mecher
+   //linhas comentada abaixo nao tenho certeza
+    /*private FakeDatabase fakeDatabase;
 
     //construtor abaixo:
     public AtorController() {
         this.atorService = new AtorService(FakeDatabase.getInstance());//criar nova instancia de ator service que recebe fakdatabase ja inicializada
     }//.getInstance= ja pega a instancia de database ja inicializado, para deixar todos os dados no fackdatabase e achar quando for criar um filme ou algo assim
-
+*/
     //demais métodos
     @PostMapping//assinatura
     @ResponseStatus(HttpStatus.CREATED)//aqui escolhe o tipo de erro ou resposta exemplo:
