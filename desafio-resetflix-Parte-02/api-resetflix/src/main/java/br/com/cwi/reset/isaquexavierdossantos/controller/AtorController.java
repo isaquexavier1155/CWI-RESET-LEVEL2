@@ -29,13 +29,13 @@ public class AtorController {
     @Autowired
     private AtorService service;
 
-   // private AtorService atorService;//refereneciar a ator service pois e nela que esta a regra de negocio e enao vamos mecher
+   // private AtorService service;//refereneciar a ator service pois e nela que esta a regra de negocio e enao vamos mecher
    //linhas comentada abaixo nao tenho certeza
     /*private FakeDatabase fakeDatabase;
 
     //construtor abaixo:
     public AtorController() {
-        this.atorService = new AtorService(FakeDatabase.getInstance());//criar nova instancia de ator service que recebe fakdatabase ja inicializada
+        this.service = new AtorService(FakeDatabase.getInstance());//criar nova instancia de ator service que recebe fakdatabase ja inicializada
     }//.getInstance= ja pega a instancia de database ja inicializado, para deixar todos os dados no fackdatabase e achar quando for criar um filme ou algo assim
 */
     //demais métodos
@@ -45,7 +45,7 @@ public class AtorController {
     //  @ResponseStatus.aqui depois do ponto escolhe outros retornos ex 400
 
     public void criarAtor(@RequestBody @Valid AtorRequest atorRequest) throws Exception {//Exception só joga pra cima, por que ela ja vai vim com a notcao para o spring tratar
-        this.atorService.criarAtor(atorRequest);
+        this.service.criarAtor(atorRequest);
         //@Valid acima é pra aceitar os Beans Validations da Classe Ator Request @NotNull
         //recebe ator request  e chama a service passando ator
         //@RequestBody: Aqui estamos dizendo que recebemos tal parâmetro no corpo da requisição.
@@ -55,13 +55,13 @@ public class AtorController {
 
     @GetMapping//consul
     public List<Ator> consultarAtores() throws Exception {//aqui deu certo nao alterar
-        final List<Ator> atores = atorService.consultarAtores();
+        final List<Ator> atores = service.consultarAtores();
        return atores;//retorna todos os atores cadastrdos
     }
 
     @GetMapping(path = "/em_atividade")
     public List<AtorEmAtividade> listarAtoresEmAtividade(String filtroNome) throws Exception {
-        final List<Ator> atoresCadastrados = atorService.consultarAtores();//Troquei o ator database por ator service e o metodo
+        final List<Ator> atoresCadastrados = service.consultarAtores();//Troquei o ator database por ator service e o metodo
 
         if (atoresCadastrados.isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.ATOR.getSingular(), TipoDominioException.ATOR.getPlural());
@@ -100,7 +100,7 @@ public class AtorController {
             throw new IdNaoInformado();
         }
 
-        final List<Ator> atores = atorService.consultarAtores();//troquei fake database por ator service e metodo
+        final List<Ator> atores = service.consultarAtores();//troquei fake database por ator service e metodo
 
         for (Ator ator : atores) {
             if (ator.getId().equals(id)) {
@@ -112,47 +112,5 @@ public class AtorController {
     }
 
 
-   // public List<Ator>listarAtoresEmAtividade(String a){
-     //   final List<Ator> atores = atorService.listarAtoresEmAtividade();
+}
 
-   // }
-
-
-}//fecha classe principal
-
-
-// Retorno: List< AtorEmAtividade > | Método: listarAtoresEmAtividade(String filtroNome)
-   // private static List<Ator> atorrin = new ArrayList<>();
-
-  //  @GetMapping("/{nome}")
-    //public List<Ator> listarAtoresEmAtividade(@PathVariable String nome) {
-//return listarAtoresEmAtividade(nome);
-   // }
-//}
-        //return null;
-
-    //retornou o numero 1 pode ser falso retorno
-
-
-      // atores.add(atorRequest);
-      //  return ResponseEntity.ok(atorRequest);
-
-   // @RequestMapping("/atores/em_atividade")
-
-   // @GetMapping("/{em_atividade}")
-   // public StatusAtividade listarAtoresEmAtividade(@PathVariable String em_atividade) {
-       // return listarAtoresEmAtividade(em_atividade);
-   // }
-
-   // @GetMapping
-    //public List<Ator> consultarTodos() {
-       // return atores;
-    //}
-
-//}
-    //ao criar os metodos cuidar as saidas status para ver oq pede
-    //criou esse metodo abaixo e apagou deve ser por esse caminho
-    //metodo listar atores
-   // public List<Ator> consultarAtores(){
-     //   this.atorService.consultarAtores()
-    //}

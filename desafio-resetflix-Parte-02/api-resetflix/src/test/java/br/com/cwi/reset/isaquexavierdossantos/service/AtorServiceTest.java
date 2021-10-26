@@ -1,4 +1,4 @@
-package br.com.cwi.reset.isaquexavierdossantos.service;
+/*package br.com.cwi.reset.isaquexavierdossantos.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -365,3 +365,5 @@ public class AtorServiceTest {
         assertEquals(nome, ator.getNome());
     }
 }
+
+ */

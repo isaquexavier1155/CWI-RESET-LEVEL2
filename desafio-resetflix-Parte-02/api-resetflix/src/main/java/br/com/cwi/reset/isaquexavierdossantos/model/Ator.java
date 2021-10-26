@@ -17,8 +17,8 @@ public class Ator {
 
     public Ator() {
     }
-
-    public Ator(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+   // esse id abaixo criei depois pode ser idGerado da clsse AtorService
+    public Ator(Integer id,String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.statusCarreira = statusCarreira;
@@ -53,7 +53,7 @@ public class Ator {
         return Objects.equals(id, ator.id) && Objects.equals(nome, ator.nome) && Objects.equals(dataNascimento, ator.dataNascimento) && statusCarreira == ator.statusCarreira && Objects.equals(anoInicioAtividade, ator.anoInicioAtividade);
     }
 
-    @Override
+    @Override//le é uma forma de garantir que você está sobrescrevendo um método e não criando um novo.
     public int hashCode() {
         return Objects.hash(id, nome, dataNascimento, statusCarreira, anoInicioAtividade);
     }

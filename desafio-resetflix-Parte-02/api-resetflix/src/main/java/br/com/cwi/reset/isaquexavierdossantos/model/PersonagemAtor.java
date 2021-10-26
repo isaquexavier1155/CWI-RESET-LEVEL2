@@ -19,7 +19,7 @@ public class PersonagemAtor {
     public PersonagemAtor() {
     }
 
-    public PersonagemAtor(Ator ator, String nomePersonagem, String descricaoPersonagem, TipoAtuacao tipoAtuacao) {
+    public PersonagemAtor(Integer id,Ator ator, String nomePersonagem, String descricaoPersonagem, TipoAtuacao tipoAtuacao) {
         this.ator = ator;
         this.nomePersonagem = nomePersonagem;
         this.descricaoPersonagem = descricaoPersonagem;

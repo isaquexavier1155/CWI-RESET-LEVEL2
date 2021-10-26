@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/filmes")
 public class FilmeController {
     @Autowired
-    private EstudioService service;
+    private FilmeService service;
 
     /*private FilmeService filmeService;
 us
@@ -28,7 +28,7 @@ us
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void criarFilme(@RequestBody FilmeRequest filmeRequest) throws Exception {
-        filmeService.criarFilme(filmeRequest);
+        service.criarFilme(filmeRequest);//esse
     }
 
     @GetMapping
@@ -37,6 +37,6 @@ us
             @RequestParam String nomeDiretor,
             @RequestParam String nomePersonagem,
             @RequestParam String nomeAtor) throws Exception {
-        return filmeService.consultarFilmes(nomeFilme, nomeDiretor, nomePersonagem, nomeAtor);
+        return service.consultarFilmes(nomeFilme, nomeDiretor, nomePersonagem, nomeAtor);//esse
     }
 }

@@ -22,20 +22,22 @@ public class FilmeService {
     private FilmeRepository repository;
 
     //comentei abaixo mas nao tenho certeza
-   /* private FakeDatabase fakeDatabase;
+    //private FakeDatabase fakeDatabase;
     private DiretorService diretorService;
     private EstudioService estudioService;
     private PersonagemAtorService personagemAtorService;
 
-    public FilmeService(FakeDatabase fakeDatabase) {
+   /* public FilmeService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
         this.diretorService = new DiretorService(fakeDatabase);
         this.estudioService = new EstudioService(fakeDatabase);
         this.personagemAtorService = new PersonagemAtorService(fakeDatabase);
-    }*/
+
+    */
+
 
     public void criarFilme(FilmeRequest filmeRequest) throws Exception {
-        final List<Filme> filmesCadastrados = fakeDatabase.recuperaFilmes();
+        final List<Filme> filmesCadastrados = repository.findAll();
 
         final Integer idGerado = filmesCadastrados.size() + 1;
 
@@ -65,7 +67,7 @@ public class FilmeService {
             }
         }
 
-        fakeDatabase.persisteFilme(filme);
+        repository.save(filme);
     }
 
     public List<Filme> consultarFilmes(
@@ -73,7 +75,7 @@ public class FilmeService {
             String nomeDiretor,
             String nomePersonagem,
             String nomeAtor) throws Exception {
-        final List<Filme> filmesCadastrados = fakeDatabase.recuperaFilmes();
+        final List<Filme> filmesCadastrados = repository.findAll();
 
         if (filmesCadastrados.isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.FILME.getSingular(), TipoDominioException.FILME.getPlural());

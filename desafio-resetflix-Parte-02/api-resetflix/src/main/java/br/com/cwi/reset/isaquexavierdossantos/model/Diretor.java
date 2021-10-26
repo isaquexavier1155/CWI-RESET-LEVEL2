@@ -20,7 +20,7 @@ public class Diretor {
     public Diretor() {
     }
 
-    public Diretor(String nome, LocalDate dataNascimento, Integer anoInicioAtividade) {
+    public Diretor(Integer id,String nome, LocalDate dataNascimento, Integer anoInicioAtividade) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.anoInicioAtividade = anoInicioAtividade;

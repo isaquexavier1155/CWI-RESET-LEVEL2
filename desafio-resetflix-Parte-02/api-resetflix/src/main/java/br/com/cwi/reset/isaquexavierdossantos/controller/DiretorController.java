@@ -27,16 +27,16 @@ public class DiretorController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastrarDiretor(@RequestBody DiretorRequest diretorRequest) throws Exception {
-        this.diretorService.cadastrarDiretor(diretorRequest);
+        this.service.cadastrarDiretor(diretorRequest);
     }
 
     @GetMapping
     public List<Diretor> listarDiretores(@RequestParam String filtroNome) throws Exception {
-        return this.diretorService.listarDiretores(filtroNome);
+        return this.service.listarDiretores(filtroNome);
     }
 
     @GetMapping(path = "/{id}")
     public Diretor consultarDiretor(@PathVariable Integer id) throws Exception {
-        return this.diretorService.consultarDiretor(id);
+        return this.service.consultarDiretor(id);
     }
 }

@@ -18,9 +18,9 @@ public class PersonagemAtorService {
     @Autowired
     private PersonagemAtorRepository repository;
 
-   /* private FakeDatabase fakeDatabase;
+  //  private FakeDatabase fakeDatabase;
     private AtorService atorService;
-
+/*
     public PersonagemAtorService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
         this.atorService = new AtorService(fakeDatabase);
@@ -29,18 +29,18 @@ public class PersonagemAtorService {
     public PersonagemAtor cadastrarPersonagemAtor(PersonagemRequest personagemRequest) throws Exception {
         new PersonagemRequestCamposObrigatoriosValidator().accept(personagemRequest);
 
-        final Integer idGerado = fakeDatabase.recuperaPersonagens().size() + 1;
+        final Integer idGerado = repository.findAll().size() + 1;
         final Ator ator = atorService.consultarAtor(personagemRequest.getIdAtor());
 
         final PersonagemAtor personagemAtor = new PersonagemAtor(idGerado, ator, personagemRequest.getNomePersonagem(), personagemRequest.getDescricaoPersonagem(), personagemRequest.getTipoAtuacao());
 
-        fakeDatabase.persistePersonagem(personagemAtor);
+        repository.save(personagemAtor);
 
         return personagemAtor;
     }
 
     public List<PersonagemAtor> consultarPersonagemAtor(String nome) throws Exception {
-        return fakeDatabase.recuperaPersonagens();
+        return repository.findAll();
     }
 
     private void validarPersonagensAtoresFilme(final List<PersonagemRequest> personagens) throws Exception {

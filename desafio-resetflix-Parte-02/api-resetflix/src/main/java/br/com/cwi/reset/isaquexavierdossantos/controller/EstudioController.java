@@ -28,16 +28,16 @@ public class EstudioController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void criarEstudio(@RequestBody EstudioRequest estudioRequest) throws Exception {
-        estudioService.criarEstudio(estudioRequest);
+        service.criarEstudio(estudioRequest);
     }
 
     @GetMapping
     public List<Estudio> consultarEstudios(@RequestParam String filtroNome) throws Exception {
-        return estudioService.consultarEstudios(filtroNome);
+        return service.consultarEstudios(filtroNome);
     }
 
     @GetMapping(path = "/{id}")
     public Estudio consultarEstudio(@PathVariable Integer id) throws Exception {
-        return estudioService.consultarEstudio(id);
+        return service.consultarEstudio(id);
     }
 }

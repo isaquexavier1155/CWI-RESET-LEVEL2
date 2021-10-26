@@ -29,7 +29,7 @@ public class Filme {
     public Filme() {
     }
 
-    public Filme(String nome, Integer anoLancamento, String capaFilme, List<Genero> generos, Estudio estudio, Diretor diretor, List<PersonagemAtor> personagens, String resumo) {
+    public Filme(Integer id,String nome, Integer anoLancamento, String capaFilme, List<Genero> generos, Estudio estudio, Diretor diretor, List<PersonagemAtor> personagens, String resumo) {
         this.nome = nome;
         this.anoLancamento = anoLancamento;
         this.capaFilme = capaFilme;

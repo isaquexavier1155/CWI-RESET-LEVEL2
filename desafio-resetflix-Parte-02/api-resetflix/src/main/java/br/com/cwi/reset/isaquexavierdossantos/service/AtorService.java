@@ -34,7 +34,7 @@ public class AtorService {
             throw new StatusCarreiraNaoInformadoException();
         }
 
-        final List<Ator> atoresCadastrados = fakeDatabase.recuperaAtores();
+        final List<Ator> atoresCadastrados = repository.findAll();//esse
 
         for (Ator atorCadastrado : atoresCadastrados) {
             if (atorCadastrado.getNome().equalsIgnoreCase(atorRequest.getNome())) {
@@ -46,11 +46,11 @@ public class AtorService {
 
         final Ator ator = new Ator(idGerado, atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
 
-        fakeDatabase.persisteAtor(ator);
+        repository.save(ator);//esse estava fakedatabase.persistente ator
     }
 
     public List<AtorEmAtividade> listarAtoresEmAtividade(String filtroNome) throws Exception {
-        final List<Ator> atoresCadastrados = fakeDatabase.recuperaAtores();
+        final List<Ator> atoresCadastrados = repository.findAll();//troquei fakeDatabase.recuperaAtores por repository.findAll()
 
         if (atoresCadastrados.isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.ATOR.getSingular(), TipoDominioException.ATOR.getPlural());
@@ -87,7 +87,7 @@ public class AtorService {
             throw new IdNaoInformado();
         }
 
-        final List<Ator> atores = fakeDatabase.recuperaAtores();
+        final List<Ator> atores = repository.findAll();//troquei fakeDatabase.recuperaAtores por repository.findAll()
 
         for (Ator ator : atores) {
             if (ator.getId().equals(id)) {
@@ -99,7 +99,7 @@ public class AtorService {
     }
 
     public List<Ator> consultarAtores() throws Exception {
-        final List<Ator> atores = fakeDatabase.recuperaAtores();
+        final List<Ator> atores = repository.findAll();////troquei fakeDatabase.recuperaAtores por repository.findAll()
 
         if (atores.isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.ATOR.getSingular(), TipoDominioException.ATOR.getPlural());

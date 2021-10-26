@@ -19,6 +19,7 @@ C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\request\FilmeRequest.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\CampoNaoInformadoException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\Estudio.java
+C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\repository\EstudioRepository.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\DataNascimentoNaoInformadoException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\DescricaoPersonagemNaoInformadaException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\Filme.java
@@ -27,6 +28,7 @@ C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\controller\FilmeController.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\StatusAtividade.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\HelloWorldController.java
+C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\repository\DiretorRepository.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\Aplicacao.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\PersonagensNaoInformadosException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\StatusCarreira.java
@@ -41,6 +43,7 @@ C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\request\DiretorRequest.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\TipoAtuacaoNaoInformadoException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\FakeDatabase.java
+C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\repository\PersonagemAtorRepository.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\PersonagemAtor.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\controller\DiretorController.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\DescricaoNaoInformadaException.java
@@ -55,5 +58,7 @@ C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\CapaFilmeNaoInformadaException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\DataCriacaoNaoInformadaException.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\request\PersonagemRequest.java
+C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\repository\AtorRepository.java
+C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\repository\FilmeRepository.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\model\Diretor.java
 C:\ResetMeuDiretorioGitHub-ResetNivel2\CWI-RESET-LEVEL2\desafio-resetflix-Parte-02\api-resetflix\src\main\java\br\com\cwi\reset\isaquexavierdossantos\exception\NascidosNoFuturoException.java

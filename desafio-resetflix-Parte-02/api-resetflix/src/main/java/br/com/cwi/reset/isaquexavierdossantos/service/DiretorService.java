@@ -30,7 +30,7 @@ public class DiretorService {
     public void cadastrarDiretor(final DiretorRequest diretorRequest) throws Exception {
         new BasicInfoRequiredValidator().accept(diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade(), TipoDominioException.DIRETOR);
 
-        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
+        final List<Diretor> diretoresCadastrados = repository.findAll();
 
         for (Diretor diretorCadastrado : diretoresCadastrados) {
             if (diretorCadastrado.getNome().equalsIgnoreCase(diretorRequest.getNome())) {
@@ -42,11 +42,11 @@ public class DiretorService {
 
         final Diretor diretor = new Diretor(idGerado, diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade());
 
-        fakeDatabase.persisteDiretor(diretor);
+        repository.save(diretor);
     }
 
     public List<Diretor> listarDiretores(final String filtroNome) throws Exception {
-        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
+        final List<Diretor> diretoresCadastrados = repository.findAll();
 
         if (diretoresCadastrados.isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.DIRETOR.getSingular(), TipoDominioException.DIRETOR.getPlural());
@@ -77,7 +77,7 @@ public class DiretorService {
             throw new IdNaoInformado();
         }
 
-        final List<Diretor> diretores = fakeDatabase.recuperaDiretores();
+        final List<Diretor> diretores = repository.findAll();
 
         for (Diretor diretor : diretores) {
             if (diretor.getId().equals(id)) {
